@@ -1,0 +1,98 @@
+[
+	{
+		"question" : "Name this tune. Play the sample and select its title from the list",
+		"media" : [
+		{"type": "audio"},
+		{ "path" : "media/question_1.mp3"}
+		],
+		"answers"  : [
+		{"id"  : 0, "text" : "Piano Sonata № 23, “Appasionata” " },
+		{"id"  : 1, "text" : "Piano Sonata № 8, “Pathetique”" },
+		{"id"  : 2, "text" : "Piano Sonata № 14, “Moonlight”" },
+		{"id"  : 3, "text" : "Piano Concerto № 3" }
+		],
+		"correct"  : 2
+	},
+	{
+		"question" : "Name this tune. Play the sample and select its title from the list",
+		"media" : [
+		{"type": "audio"},
+		{ "path" : "media/question_2.mp3"}
+		],
+		"answers"  : [
+		{"id"  : 0, "text" : "Piano Concerto № 3" },
+		{"id"  : 1, "text" : "Piano Sonata № 23, “Appasionata”" },
+		{"id"  : 2, "text" : "Piano Sonata № 15, “Pastoral”" },
+		{"id"  : 3, "text" : "Piano Sonata № 8, “Pathetique”" }
+		],
+		"correct"  : 3
+	},
+	{
+		"question" : "Name this tune. Play the sample and select its title from the list",
+		"media" : [
+		{"type": "audio"},
+		{ "path" : "media/question_3.mp3"}
+		],
+		"answers"  : [
+		{"id"  : 0, "text" : "Piano Concerto № 3" },
+		{"id"  : 1, "text" : "Piano Sonata № 23, “Appasionata”" },
+		{"id"  : 2, "text" : "Piano Sonata № 17, “The Tempest”" },
+		{"id"  : 3, "text" : "Piano Sonata № 8, “Pathetique”" }
+		],
+		"correct"  : 1
+	},
+	{
+		"question" : "Name this tune. Play the sample and select its title from the list",
+		"media" : [
+		{"type": "audio"},
+		{ "path" : "media/question_4.mp3"}
+		],
+		"answers"  : [
+		{"id"  : 0, "text" : "Piano Concerto № 3" },
+		{"id"  : 1, "text" : "Piano Concerto № 4" },
+		{"id"  : 2, "text" : "Piano Sonata № 17, “The Tempest”" },
+		{"id"  : 3, "text" : "Piano Sonata № 8, “Pathetique”" }
+		],
+		"correct"  : 0,
+		"feedback" : "It's still a concerto, even if the orchestra is out on a break."
+	},
+	{
+		"question" : "Name this tune. Play the sample and select its title from the list",
+		"media" : [
+		{"type": "audio"},
+		{ "path" : "media/question_5.mp3"}
+		],
+		"answers"  : [
+		{"id"  : 0, "text" : "Piano Sonata № 17, “The Tempest”" },
+		{"id"  : 1, "text" : "Piano Sonata № 23, “Appasionata”" },
+		{"id"  : 2, "text" : "Piano Sonata № 8, “Pathetique”" },
+		{"id"  : 3, "text" : "This is not Beethoven." }
+		],
+		"correct"  : 0
+	},
+	{
+		"question" : "Which image shows an oboe?",
+		"media" : [
+		{"type": ""},
+		{ "path" : ""}
+		],
+		"answers"  : [
+			{"id"  : 0, "image" : "media/instrument_1.png" },
+			{"id"  : 1, "image" : "media/instrument_2.png" }
+		],
+		"correct"  : 1,
+		"feedback" : "Compared to the clarinet, the oboe has a slimmer mouthpiece."
+	},
+	{
+		"question" : "What is the name of this instrument?",
+		"media" : [
+		{"type": "image"},
+		{ "path" : "media/instrument_1.png"}
+		],
+		"answers"  : [
+			{"id"  : 0, "text" : "This is a clarinet."},
+			{"id"  : 1, "text" : "This is an oboe."}
+		],
+		"correct"  : 0
+	}
+]

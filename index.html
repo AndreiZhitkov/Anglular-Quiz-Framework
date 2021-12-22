@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html ng-app="musQuiz">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Test Your Knowledge of Beethoven</title>
+		<!-- Facebook share info begin -->
+		<meta property="og:url"           content="http://www.avidforum.com/apps/music_quiz/beethoven_quiz/" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"        	content="So you think you know Beethoven?" />
+		<meta property="og:description"   	content="Take a short and fun quiz to test your knowledge of Beethoven" />
+		<meta property="og:image"         content="http://www.avidforum.com/apps/music_quiz/beethoven_quiz/images/only-the-pure-in-heart-can-make-a-good-soup.jpg" />
+		<!-- Facebook share info end -->
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/quiz.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/quiz.css">
+	</head>
+	<body>
+	<!-- Facebook share code begin-->		
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/sl_SI/sdk.js#xfbml=1&version=v2.8";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- Facebook share code end-->
+		<div id="musQuiz" ng-controller="QuizController">
+			<h1>Test Your Knowledge <br />of <span>Beethoven</span></h1>
+			<div class="progress {{ (activeQuestion >= 0) ? 'active' : 'inactive' }}" >
+			<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1"
+	 id="scale" inkscape:version="0.44.1" sodipodi:docbase="/Users/bdesham/Documents/Commons images/Music/7-note segment of C5" sodipodi:docname="c5_segment2.svg" sodipodi:version="0.32" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 444 139"
+	 style="enable-background:new 0 0 444 139;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<path id="rect7956" d="M92.2,115.7h26.4c0.8,0,1.4,0.6,1.4,1.4l0,0c0,0.8-0.6,1.4-1.4,1.4H92.2c-0.8,0-1.4-0.6-1.4-1.4l0,0
+	C90.8,116.4,91.5,115.7,92.2,115.7z"/>
+<line id="line7960" class="st0" x1="19.7" y1="102.4" x2="424" y2="102.4"/>
+<line id="line7964" class="st0" x1="19.7" y1="87.6" x2="424" y2="87.6"/>
+<line id="line7968" class="st0" x1="19.7" y1="72.8" x2="424" y2="72.8"/>
+<line id="line7972" class="st0" x1="19.7" y1="58" x2="424" y2="58"/>
+<line id="line7976" class="st0" x1="19.7" y1="43.2" x2="424" y2="43.2"/>
+<path id="note7" class="{{ (activeQuestion >= 6 ) ? 'on' : 'off' }} {{ ( activeQuestion >= 6 ) ?  correctClass[6] : '' }}"
+	d="M383.5,68.6c-0.6-2.2-2.5-3.7-5.3-4c-0.5-0.1-1.7-0.1-2.1,0c-2.5,0.2-5,1.2-7.2,2.9c-2.4,1.8-4,4.1-4.6,6.6
+	c-0.1,0.5-0.1,1.2-0.1,1.9c0,0.1-0.1,0.1-0.1,0.2v40.4c0,0.3,0.2,0.5,0.5,0.5h0.7c0.3,0,0.5-0.2,0.5-0.5V79.4c1.8,1.5,4.7,2,7.9,1.2
+	c1.7-0.5,3.5-1.4,5.1-2.5c2.4-1.8,4-4.1,4.6-6.6C383.6,70.8,383.6,69.3,383.5,68.6z"/>
+<path id="note6" class="{{ (activeQuestion >= 5) ? 'on' : 'off' }} {{ ( activeQuestion >= 5 ) ?  correctClass[5] : '' }}"
+	d="M338,28.9c0-0.3-0.2-0.5-0.5-0.5h-0.7c-0.3,0-0.5,0.2-0.5,0.5v44.6c-0.9-0.8-2.2-1.4-3.7-1.6
+	c-0.5-0.1-1.7-0.1-2.1,0c-2.5,0.2-5,1.2-7.2,2.9c-2.4,1.8-4,4.1-4.6,6.6c-0.1,0.7-0.1,2.2,0.1,2.8c0.2,0.7,0.5,1.4,0.8,1.8
+	c1.6,2.1,5,2.8,8.6,1.9c1.7-0.5,3.5-1.4,5.1-2.5c2.4-1.8,4-4.1,4.6-6.6c0.1-0.5,0.1-1.2,0.1-1.9c0-0.1,0.1-0.1,0.1-0.2L338,28.9
+	L338,28.9z"/>
+<path id="note5" class="{{ (activeQuestion >= 4) ? 'on' : 'off' }} {{ ( activeQuestion >= 4 ) ?  correctClass[4] : '' }}"
+	d="M293.4,36.3c0-0.3-0.2-0.5-0.5-0.5h-0.7c-0.3,0-0.5,0.2-0.5,0.5V81c-0.9-0.8-2.2-1.4-3.7-1.6
+	c-0.5-0.1-1.7-0.1-2.1,0c-2.5,0.2-5,1.2-7.2,2.9c-2.4,1.8-4,4.1-4.6,6.6c-0.1,0.7-0.1,2.2,0.1,2.8c0.2,0.7,0.5,1.4,0.8,1.8
+	c1.6,2.1,5,2.8,8.6,1.9c1.7-0.5,3.5-1.4,5.1-2.5c2.4-1.8,4-4.1,4.6-6.6c0.1-0.5,0.1-1.2,0.1-1.9c0-0.1,0.1-0.1,0.1-0.2L293.4,36.3
+	L293.4,36.3z"/>
+<path id="note4" class="{{ (activeQuestion >= 3) ? 'on' : 'off' }} {{ ( activeQuestion >= 3 ) ?  correctClass[3] : '' }}"
+	d="M248.9,43.7c0-0.3-0.2-0.5-0.5-0.5h-0.7c-0.3,0-0.5,0.2-0.5,0.5v44.6c-0.9-0.8-2.2-1.4-3.7-1.6
+	c-0.5-0.1-1.7-0.1-2.1,0c-2.5,0.2-5,1.2-7.2,2.9c-2.4,1.8-4,4.1-4.6,6.6c-0.1,0.7-0.1,2.2,0.1,2.8c0.2,0.7,0.5,1.4,0.8,1.8
+	c1.6,2.1,5,2.8,8.6,1.9c1.7-0.5,3.5-1.4,5.1-2.5c2.4-1.8,4-4.1,4.6-6.6c0.1-0.5,0.1-1.2,0.1-1.9c0-0.1,0.1-0.1,0.1-0.2L248.9,43.7
+	L248.9,43.7z"/>
+<path id="note3" class="{{ (activeQuestion >= 2) ?  'on' : 'off' }} {{ ( activeQuestion >= 2 ) ?  correctClass[2] : '' }}"
+	d="M204.3,51.1c0-0.3-0.2-0.5-0.5-0.5h-0.7c-0.3,0-0.5,0.2-0.5,0.5v44.6c-0.9-0.8-2.2-1.4-3.7-1.6
+	c-0.5-0.1-1.7-0.1-2.1,0c-2.5,0.2-5,1.2-7.2,2.9c-2.4,1.8-4,4.1-4.6,6.6c-0.1,0.7-0.1,2.2,0.1,2.8c0.2,0.7,0.5,1.4,0.8,1.8
+	c1.6,2.1,5,2.8,8.6,1.9c1.7-0.5,3.5-1.4,5.1-2.5c2.4-1.8,4-4.1,4.6-6.6c0.1-0.5,0.1-1.2,0.1-1.9c0-0.1,0.1-0.1,0.1-0.2V51.1H204.3z"
+	/>
+<path id="note2" class="{{ (activeQuestion >= 1) ? 'on' : 'off' }} {{ ( activeQuestion >= 1 ) ?  correctClass[1] : '' }}"
+	d="M159.7,58.5c0-0.3-0.2-0.5-0.5-0.5h-0.7c-0.3,0-0.5,0.2-0.5,0.5v44.6c-0.9-0.8-2.2-1.4-3.7-1.6
+	c-0.5-0.1-1.7-0.1-2.1,0c-2.5,0.2-5,1.2-7.2,2.9c-2.4,1.8-4,4.1-4.6,6.6c-0.1,0.7-0.1,2.2,0.1,2.8c0.2,0.7,0.5,1.4,0.8,1.8
+	c1.6,2.1,5,2.8,8.6,1.9c1.7-0.5,3.5-1.4,5.1-2.5c2.4-1.8,4-4.1,4.6-6.6c0.1-0.5,0.1-1.2,0.1-1.9c0-0.1,0.1-0.1,0.1-0.2V58.5H159.7z"
+	/>
+<path id="note1" class="{{ ( activeQuestion >= 0 ) ?  'on' : 'off' }} {{ ( activeQuestion >= 0 ) ?  correctClass[0] : '' }}"
+	d="M115.2,65.9c0-0.3-0.2-0.5-0.5-0.5H114c-0.3,0-0.5,0.2-0.5,0.5v44.6c-0.9-0.8-2.2-1.4-3.7-1.6
+	c-0.5-0.1-1.7-0.1-2.1,0c-2.5,0.2-5,1.2-7.2,2.9c-2.4,1.8-4,4.1-4.6,6.6c-0.1,0.7-0.1,2.2,0.1,2.8c0.2,0.7,0.5,1.4,0.8,1.8
+	c1.6,2.1,5,2.8,8.6,1.9c1.7-0.5,3.5-1.4,5.1-2.5c2.4-1.8,4-4.1,4.6-6.6c0.1-0.5,0.1-1.2,0.1-1.9c0-0.1,0.1-0.1,0.1-0.2V65.9H115.2z"
+	/>
+<path id="text8024" d="M49.4,13.8c-0.3,0.1-1.6,1.4-2.4,2.3c-3.7,4.1-5.8,9.3-6.2,14.8c-0.2,2.3,0,6.4,0.5,9.5
+	c0.5,3.5,1.4,7.4,3.1,12.4l0.5,1.5L42.7,57c-3.3,4.1-4.4,5.7-5.9,7.9c-3.5,5.4-5.4,9.8-5.9,14.8c-0.1,1.1-0.1,3.8,0,4.8
+	c0.4,2.7,1,4.9,2.1,7.2c1.1,2.1,2.3,3.8,4,5.4c3.4,3.4,7.5,5.4,12.3,5.9c1.5,0.2,4,0.1,5.7-0.1c0.5-0.1,0.8-0.1,0.8-0.1
+	s0.1,0.8,0.1,1.9c0,2.9-0.2,6.7-0.4,8.5c-0.4,2.8-1.5,5.5-3.1,7.4c-1.4,1.7-3.2,2.8-5.1,3c-0.8,0.1-1.2,0.1-2.1,0.1
+	c-1.7-0.2-3.2-0.7-4.6-1.7c-0.5-0.4-1.6-1.5-2-1.9l-0.2-0.3l0.4,0.1c0.5,0.2,1.4,0.2,2,0.1c2.9-0.4,5-2.9,4.8-5.9
+	c-0.2-3.2-2.4-5.6-5.4-5.8c-2.3-0.1-4.7,1.1-5.9,3c-0.9,1.5-1.2,3.3-0.7,5.6c0.5,2.1,1.6,4.2,3.2,5.7c2.4,2.3,5.7,3.6,9.1,3.6
+	c5,0,9.2-3.5,11.2-9.2c0.9-2.6,1.2-5.5,1.3-11.7V102l0.7-0.2c2-0.8,3.4-1.8,4.9-3.3c2.5-2.5,4-5.4,4.5-8.9c0.1-1.1,0.1-3.3-0.1-4.4
+	c-0.8-4.8-3.5-9-7.6-11.4c-2.1-1.2-4.4-1.9-6.9-2.1h-0.7l-0.1-0.4c-0.1-0.2-0.2-0.9-0.4-1.4c-0.7-2.4-1.8-6.1-2.9-9.2L49.2,59
+	l0.8-1.1c3-4,4.8-6.8,6.4-9.8c1.7-3.4,2.7-6.5,3.1-10c0.1-1,0.1-3.6,0-4.7C58.6,26.8,55.1,19,51,14.5C50.3,13.8,49.9,13.6,49.4,13.8
+	 M53.4,23.1c1.1,1.9,1.5,3.4,1.8,5.2c0.1,0.9,0.1,4.2,0,5.3c-0.6,4.8-2.4,9.3-6,14.7c-0.9,1.3-2.4,3.4-2.4,3.4
+	c-0.1-0.1-1.4-4.7-1.9-6.6c-0.9-3.4-1.1-5.3-0.9-7.4c0.3-4,1.8-7.7,4.3-10.9c0.6-0.8,2.1-2.2,2.8-2.8c0.7-0.5,1.8-1.4,1.9-1.4
+	S53.1,22.8,53.4,23.1 M48.7,65.8c0.5,1.6,1.5,5.1,1.9,6.2c0,0.1,0.1,0.1-0.8,0.3c-4.4,0.9-7.8,4.2-9,8.5c-0.8,3.1-0.4,6.5,1.3,9.2
+	c0.7,1.2,2,2.6,3.1,3.4c1.2,0.9,2.9,1.8,3.4,1.8c0.8,0,1.4-0.7,1.4-1.5c-0.1-0.5-0.3-0.7-0.9-1.1c-0.9-0.5-1.7-1.1-2.3-1.7
+	c-1.5-1.5-2.3-3.1-2.4-5.1c-0.1-3.4,2.4-6.4,6.3-7.2c0.5-0.1,1.6-0.2,1.7-0.2c0,0.1,0.8,3.3,1,4.6c1.2,5.7,2.1,12,2.4,16.5v0.7
+	l-0.5,0.1c-1.1,0.2-1.8,0.2-3.4,0.2c-2,0-2.5-0.1-4.1-0.4c-3.4-0.7-6.8-2.6-9-5c-1.8-1.9-2.8-3.9-3.4-6.3c-0.1-0.7-0.1-0.8-0.1-2.2
+	c0-3.8,0.9-7.5,2.8-11.4c1.7-3.5,3.7-6.6,7.9-11.9l1.4-1.8l0.4,1.1C47.9,63.3,48.3,64.7,48.7,65.8 M55.7,78.8c2.1,0.5,4,1.5,5.6,3.1
+	c3.4,3.5,4.4,8.8,2.2,12.9c-0.7,1.4-1.8,2.7-3.1,3.7c-0.5,0.4-2,1.2-2.1,1.1c0-0.1-0.1-0.5-0.1-1.1c-0.4-5.7-1.4-12.2-2.9-18.4
+	c-0.2-0.7-0.3-1.3-0.3-1.3C55,78.6,55.1,78.6,55.7,78.8"/>
+</svg>
+			
+			</div>
+			<div class="intro {{ (activeQuestion > -1) ? 'inactive' : 'active' }}">
+			<h2>Welcome</h2>
+			<p>Click Begin to start the test.</p>
+			<p class="btn" ng-click="activeQuestion = 0">Begin</p>
+			</div>
+			<div class="question 
+			{{ $index === activeQuestion ? 'active' : 'inactive' }}
+			{{ myQuestion.questionState === 'answered' ? 'answered' : 'unanswered' }}
+			" ng-repeat="myQuestion in myQuestions">
+				<p class="txt">{{ myQuestion.question}}</p>
+				<div ng-if="myQuestions[$index].media[0].type === 'audio' ">
+				<audio id="player{{$index}}" ng-src="{{myQuestions[$index].media[1].path}}" type="audio/mpeg" ></audio> 
+				<div class="btn" ng-click="playAudio()" >Play</div>
+				</div>
+				<img ng-if="myQuestions[$index].media[0].type === 'image' " ng-src="{{myQuestions[$index].media[1].path}}" >
+				<p class="ans" 
+				ng-class="{
+					image:Answer.image,
+					selected:isSelected($parent.$index, $index),
+					correct:isCorrect($parent.$index, $index)
+				}"
+				ng-style="{ 'background-image' : 'url({{ Answer.image}})'}"
+				ng-click="selectAnswer($parent.$index, $index)"
+				ng-repeat="Answer in myQuestions[$index].answers">{{Answer.text}}</p>
+				<div class="feedback">
+					<p ng-show="myQuestion.correctness === 'correct' ">You are <strong>correct</strong>.</p>
+					<p ng-show="myQuestion.correctness === 'incorrect' ">Oops! This is wrong.</p>
+					<p>{{myQuestion.feedback}}</p>
+					<div class="btn" ng-click="selectContinue()">Continue</div>
+				</div>
+			</div>
+			<div class="results {{ (totalQuestions === activeQuestion) ? 'active' : 'inactive' }}">
+			<h3>Results</h3>
+				<p>You scored {{persentage | number:0}}% by correctly answering {{score}} of the total {{totalQuestions}} questions.</p>
+				<p>Now don't be shy and tell the world about it.</p>
+				<div class="share" ng-bind-html="createShareLinks(persentage)"></div>
+			</div>
+		</div>
+	</body>
+</html>

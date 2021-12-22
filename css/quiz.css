@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Tangerine');
+
+body {
+	background:   url(../images/background.jpg) no-repeat 1rem 1rem fixed;
+	padding: 2rem; 
+}
+
+#musQuiz {
+	color: black;
+	font-family: Georgia,Palatino,serif;
+	font-size: 1.2rem;
+	height: 70rem;
+	left: 14rem;
+	overflow: hidden;
+	position: relative;
+	width: 32rem;
+}
+
+#musQuiz h1 {
+	font-family: 'Tangerine', cursive;
+	font-size: 4.2rem;
+	font-weight: 400;
+	line-height: 3.8rem;
+	margin: 0.8rem;
+	text-align: center;
+}
+
+#musQuiz h1 span { font-size: 12rem; text-align: right; }
+#musQuiz h2 {  font-size: 3.2rem; font-weight: 400; margin: .5rem; }
+
+#musQuiz .btn {
+	display: inline-block;
+	cursor: pointer;
+	background-color: #ddd;
+	box-shadow: -2px 2px 2px 2px rgba(0,0,0,0.5);
+	text-decoration: none;
+	padding: .5rem 1rem;
+	border-radius: .5rem;
+	margin: 1rem 4%;
+	float: right; 
+}
+
+/* Progress */
+
+#musQuiz div.progress { position: absolute; }
+
+#musQuiz div.progress.inactive { left: 100rem; position: absolute; }
+
+#musQuiz div.progress svg {
+	width: 22rem;
+}
+
+/* Intro */
+
+#musQuiz .intro {
+	position: absolute;
+	left: 100rem;
+	width: 30rem; }
+
+/* Questions */
+
+#musQuiz .question {
+	position: absolute;
+	width: 100%;
+	left: 100rem;
+	top: 22rem;
+}
+
+#musQuiz .question .txt {
+	font-size: 1.6rem;
+}
+
+#musQuiz .question img {
+	width:  100%;
+}
+
+#musQuiz .question .ans {
+	display: inline-block;
+	font-size: 1.2rem;
+	width: 90%;
+	border: 2px solid rgba(128, 128, 128, .4);
+	border-radius: .5rem;
+	padding: 0.8rem;
+	margin:  0 1rem .8rem 0;
+	position: relative;
+}
+
+#musQuiz .question .ans::after {
+	content: '';
+	display: block;
+	width: 1rem;
+	height: 1rem;
+	background:  no-repeat 0 0;
+	background-size: 1rem 1rem;
+	position: absolute;
+	top: 1rem;
+	right: -1.2rem;
+}
+
+#musQuiz .question .ans.selected {
+	border-color: rgba(128, 128, 228, .4);
+}
+
+#musQuiz .question .ans.selected::after {
+	background-image: url(../images/icon_incorrect.svg);
+}
+
+#musQuiz .question .ans.correct {
+	border-color: rgba(108, 228, 108, .4);
+}
+
+#musQuiz .question .ans.correct::after {
+	background-image: url(../images/icon_correct.svg);
+}
+
+#musQuiz .question.unanswered .ans { cursor: pointer; }
+#musQuiz .question.unanswered .ans:hover { background-color: rgba(128,128,128, 0.4); }
+
+#musQuiz .question.answered .ans { cursor: default; }
+
+#musQuiz .question .ans.image {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: auto;
+    min-height: 6rem;
+    padding: 0;
+}
+
+#musQuiz .question .ans.image img { width: 100%; }
+
+#musQuiz .question p.ans.image {}
+
+#musQuiz #player { display: none; }
+
+#musQuiz div button {
+	font-size: inherit;
+	font-family: inherit;
+	background: inherit;
+}
+
+/* Feedback */
+
+#musQuiz .feedback {
+	color: navi; 
+	margin-top: 1rem; 
+	transition: opacity 1.5s, margin-top 1.5s;
+	visibility: hidden;
+	opacity: 0;
+}
+
+#musQuiz .answered .feedback { 
+	visibility: visible;
+	opacity: 1;
+	margin-top: 1rem;
+}
+
+/* Results */
+
+#musQuiz .results {
+	position: absolute;
+	width: 30rem;
+	top: 22rem;
+}
+
+#musQuiz .results.active {left: 0;}
+#musQuiz .results.inactive {left: 100rem;}
+
+#musQuiz .results .share a.btn {
+	color: black;
+	margin: 1rem;
+	padding-left: 3rem;
+	width: 40%;
+	background-repeat: no-repeat;
+	background-position: .6rem .7rem;
+	background-size: 1.2rem 1.2rem;
+}
+
+#musQuiz .results div.share div.fb-share-button.btn {
+	background-color: #8b9dc3;
+	background-image: url(../images/icon_facebook.svg);
+	background-repeat: no-repeat;
+	background-position: 0.6rem 0.7rem;
+	background-size: 1.2rem 1.2rem;
+	color: black;
+	margin: 1rem;
+	padding-left: 3rem;
+	width: 40%;
+}
+
+#musQuiz .results div.share div.fb-share-button.btn a {
+    text-decoration: none;
+    color: black;
+}
+
+#musQuiz .results .share a.btn.twitter {
+	background-color: #00aced;
+	background-image: url(../images/icon_twitter.svg);
+}
+
+#musQuiz .results .share a.btn.email {
+	background-color: #ccc;
+	background-image: url(../images/icon_email.svg);
+}
+
+#musQuiz .active, #musQuiz .inactive {
+	transition: left 1.5s ease-in-out;
+}
+
+#musQuiz .active { left: 0; }
+
+#musQuiz .intro.inactive, #musQuiz.inactive.answered { left: -100rem; }
+
+/* SVG */
+#note1.off, #note2.off, #note3.off, #note4.off, #note5.off, #note6.off, #note7.off { fill: rgba(128, 128, 128, 0.5);}
+#note1.on, #note2.on, #note3.on, #note4.on, #note5.on, #note6.on, #note7.on { fill: rgba(0, 0, 0, 1); transition: fill 1s;}
+
+#note1.incorrect, #note2.incorrect, #note3.incorrect, #note4.incorrect, #note5.incorrect, #note6.incorrect, #note7.incorrect {fill: red; }
+
+#note1.correct, #note2.correct, #note3.correct, #note4.correct, #note5.correct, #note6.correct, #note7.correct {fill: green;}
